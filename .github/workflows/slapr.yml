@@ -1,3 +1,5 @@
+# https://github.com/DataDog/slapr
+
 name: Slack emoji PR updates
 on:
   pull_request_review:
@@ -15,8 +17,8 @@ jobs:
         SLACK_CHANNEL_ID: "${{ secrets.SLACK_CHANNEL_ID }}"
         SLACK_API_TOKEN: "${{ secrets.SLACK_API_TOKEN }}"
         SLAPR_BOT_USER_ID: "${{ secrets.SLAPR_BOT_USER_ID }}"
-        SLAPR_EMOJI_REVIEW_STARTED: "review_started"
-        SLAPR_EMOJI_APPROVED: "approved2"
-        SLAPR_EMOJI_CHANGES_REQUESTED: "changes_requested"
-        SLAPR_EMOJI_MERGED: "merged"
-        SLAPR_EMOJI_CLOSED: "closed"     
+        SLAPR_EMOJI_REVIEW_STARTED: "eyes"
+        SLAPR_EMOJI_APPROVED: "thumbsup"
+        SLAPR_EMOJI_CHANGES_REQUESTED: "x"
+        SLAPR_EMOJI_MERGED: "merge"
+        SLAPR_EMOJI_CLOSED: "closed"
