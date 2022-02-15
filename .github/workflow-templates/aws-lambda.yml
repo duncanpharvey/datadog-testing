@@ -10,7 +10,7 @@ on:
       # - 'main'
       - 'aws-lambda/**' # remove after workflow testing is complete
     paths:
-      - {{ env.SCRIPT_PATH }}**
+      - cronJobs/duncan_example/**
 
 jobs:
   workflow:
