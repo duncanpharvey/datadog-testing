@@ -1,0 +1,23 @@
+name: Example Pipeline Name             # update pipeline name 
+
+env:
+  SCRIPT_NAME: duncan_example           # update script name
+  SCRIPT_PATH: cronJobs/duncan_example/ # update script path
+
+on:
+  push:
+    branches:
+      # - 'main'
+      - 'aws-lambda/**' # remove after workflow testing is complete
+    paths:
+      - {{ env.SCRIPT_PATH }}**
+
+jobs:
+  workflow:
+    uses: ./.github/workflows/reusable_workflow.yaml
+    with:
+      template_path: {{ env.SCRIPT_PATH }}
+      stack_name: {{ env.SCRIPT_NAME }}
+    secrets:
+      key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

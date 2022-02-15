@@ -1,0 +1,7 @@
+{
+    "name": "AWS Lambda Workflow",
+    "description": "Starter workflow for AWS Lambda",
+    "categories": [
+        "Python"
+    ]
+}
